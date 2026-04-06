@@ -24,20 +24,29 @@ When you ask your AI assistant _"What Chinese drama should I watch?"_, it can no
 
 ## 🚀 Quick Start
 
-### Option 1: Local Mode (Claude Desktop / Cursor / Windsurf)
+### Option 1: Clone & Run (Recommended)
 
-Add to your MCP configuration:
+```bash
+git clone https://github.com/aimeeluwang/wetv-mcp.git
+cd wetv-mcp
+npm install
+npm run build
+```
+
+Then add to your MCP configuration:
 
 ```json
 {
   "mcpServers": {
     "wetv": {
-      "command": "npx",
-      "args": ["-y", "wetv-mcp"]
+      "command": "node",
+      "args": ["/path/to/wetv-mcp/dist/index.js"]
     }
   }
 }
 ```
+
+> 💡 Replace `/path/to/wetv-mcp` with the actual path where you cloned the repo.
 
 **Configuration file locations:**
 - **Claude Desktop**: `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows)
@@ -48,11 +57,7 @@ Add to your MCP configuration:
 ### Option 2: Remote Mode (HTTP Server)
 
 ```bash
-# Clone and install
-git clone https://github.com/aimeeluwang/wetv-mcp.git
 cd wetv-mcp
-npm install
-npm run build
 
 # Start HTTP server
 npm run start:http

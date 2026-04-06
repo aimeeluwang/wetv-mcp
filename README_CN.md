@@ -24,7 +24,14 @@ YouTube 和 Spotify 已经有了 MCP 服务器，但**中文长视频领域的 M
 
 ## 🚀 快速开始
 
-### 方式一：本地模式（Claude Desktop / Cursor / Windsurf）
+### 方式一：克隆安装（推荐）
+
+```bash
+git clone https://github.com/aimeeluwang/wetv-mcp.git
+cd wetv-mcp
+npm install
+npm run build
+```
 
 在你的 MCP 配置文件中添加：
 
@@ -32,12 +39,14 @@ YouTube 和 Spotify 已经有了 MCP 服务器，但**中文长视频领域的 M
 {
   "mcpServers": {
     "wetv": {
-      "command": "npx",
-      "args": ["-y", "wetv-mcp"]
+      "command": "node",
+      "args": ["/path/to/wetv-mcp/dist/index.js"]
     }
   }
 }
 ```
+
+> 💡 将 `/path/to/wetv-mcp` 替换为你实际的克隆路径。
 
 **配置文件位置：**
 - **Claude Desktop**: `~/Library/Application Support/Claude/claude_desktop_config.json`（macOS）
@@ -47,9 +56,7 @@ YouTube 和 Spotify 已经有了 MCP 服务器，但**中文长视频领域的 M
 ### 方式二：远程模式（HTTP 服务器）
 
 ```bash
-git clone https://github.com/aimeeluwang/wetv-mcp.git
 cd wetv-mcp
-npm install && npm run build
 npm run start:http
 # 服务器运行在 http://localhost:3000/mcp
 ```
