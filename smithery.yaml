@@ -1,0 +1,11 @@
+# Smithery.ai configuration for WeTV MCP Server
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+  commandFunction: |-
+    (config) => ({
+      "command": "node",
+      "args": [require("path").join(__dirname, "dist", "index.js")]
+    })

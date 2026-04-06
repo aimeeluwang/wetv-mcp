@@ -1,0 +1,63 @@
+{
+  "name": "wetv-mcp",
+  "version": "1.0.0",
+  "description": "WeTV & Tencent Video MCP Server - Search, discover, and explore Chinese dramas, variety shows, anime, and movies. The first MCP for Chinese long-form video streaming. 全球首个中文长视频 MCP 服务器。",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "wetv",
+    "tencent-video",
+    "chinese-drama",
+    "c-drama",
+    "streaming",
+    "video",
+    "ai",
+    "model-context-protocol",
+    "腾讯视频",
+    "kdrama",
+    "anime",
+    "variety-show"
+  ],
+  "homepage": "https://github.com/aimeeluwang/wetv-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aimeeluwang/wetv-mcp.git"
+  },
+  "license": "MIT",
+  "author": "aimeeluwang",
+  "mcpName": "io.github.aimeeluwang/wetv",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "wetv-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README_CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/http.ts",
+    "start": "node dist/index.js",
+    "start:http": "node dist/http.js",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "express": "^5.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

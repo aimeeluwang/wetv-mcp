@@ -1,0 +1,19 @@
+# Source
+src/
+tsconfig.json
+
+# Dev files
+.github/
+.vscode/
+*.tsbuildinfo
+
+# Config
+smithery.yaml
+server.json
+.gitignore
+.DS_Store
+
+# Tests
+__tests__/
+*.test.ts
+*.spec.ts

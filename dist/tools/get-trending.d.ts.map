@@ -1,0 +1,1 @@
+{"version":3,"file":"get-trending.d.ts","sourceRoot":"","sources":["../../src/tools/get-trending.ts"],"names":[],"mappings":"AAAA;;;GAGG;AAGH,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,yCAAyC,CAAC;AACzE,OAAO,EAAE,eAAe,EAAE,MAAM,oBAAoB,CAAC;AAIrD,wBAAgB,mBAAmB,CAAC,MAAM,EAAE,SAAS,EAAE,WAAW,EAAE,eAAe,QAoClF"}
